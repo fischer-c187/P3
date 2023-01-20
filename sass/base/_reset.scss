@@ -42,6 +42,7 @@ table {
 
 /* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
 input, textarea {
+    -webkit-user-select: auto;
     user-select: auto;
 }
 
@@ -84,7 +85,9 @@ pre {
     -moz-user-modify: read-write;
     -webkit-user-modify: read-write;
     overflow-wrap: break-word;
+    -webkit-line-break: after-white-space;
     line-break: after-white-space;
+    -webkit-user-select: auto;
     user-select: auto;
 }
 
