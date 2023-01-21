@@ -141,6 +141,55 @@ html {
   margin-bottom: 1.875em;
 }
 
+.functionning {
+  width: 90%;
+  margin: auto;
+  padding: 3.125em 0;
+}
+.functionning__grid-wrapper {
+  display: grid;
+  margin-top: 1.5625em;
+  grid-template: 75px/repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 75px;
+  gap: 25px;
+}
+.functionning__card {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.05);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 20px;
+  border-radius: 20px;
+  font-weight: 500;
+  margin-left: 12.5px;
+  padding-left: 32.5px;
+}
+.functionning__card i {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1.25em;
+}
+.functionning__card--number {
+  position: absolute;
+  left: -12px;
+  height: 25px;
+  width: 25px;
+  padding-top: 0.1875em;
+  background-color: #9356dc;
+  color: white;
+  text-align: center;
+  border-radius: 50%;
+  font-weight: 500;
+}
+.functionning__card--pink {
+  background-color: rgba(147, 86, 220, 0.1);
+}
+.functionning__card--pink i {
+  color: #9356dc;
+}
+
 .btn {
   background: linear-gradient(#ff79da, 25%, #9356dc);
   color: white;

@@ -8,3 +8,7 @@ $secondary-color: #ff79da;
 $new-color: #99E2D0;
 $btn-color: linear-gradient($secondary-color, 25%, $primary-color);
 $btn-color-hover: linear-gradient(lighten($secondary-color, 10%), 25%, lighten($primary-color, 10%));
+$grey-background: rgba(0, 0, 0, 0.05);
+
+// size
+$size-icon-number: 25px;
