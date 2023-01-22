@@ -107,6 +107,14 @@ html {
   font-family: roboto, sans-serif;
 }
 
+@keyframes heart {
+  0% {
+    transform: translatey(0) rotate(0deg) scale(2);
+  }
+  100% {
+    transform: translatey(-120%) rotate(360deg) scale(2);
+  }
+}
 .header {
   text-align: center;
 }
@@ -190,6 +198,43 @@ html {
   color: #9356dc;
 }
 
+.restaurant {
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 3.125em 0;
+}
+.restaurant .title {
+  margin-left: 5%;
+}
+.restaurant__grid-wrapper {
+  width: 90%;
+  margin: 1.5625em auto;
+  display: grid;
+  grid-template: 250px/repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 250px;
+  gap: 25px;
+}
+
+.footer {
+  padding: 1.5625em;
+  background-color: #353535;
+  color: white;
+}
+.footer__logo {
+  filter: invert(100%);
+  height: 20px;
+  margin-bottom: 0.9375em;
+}
+.footer__item {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  margin-bottom: 0.625em;
+}
+.footer__item i {
+  width: 12px;
+  font-size: 0.75rem;
+  margin-right: 0.625em;
+}
+
 .btn {
   background: linear-gradient(#ff79da, 25%, #9356dc);
   color: white;
@@ -212,6 +257,62 @@ html {
 .title {
   font-size: 1.5rem;
   font-weight: 700;
+}
+
+.restaurant .card {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+.restaurant .card a {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+.restaurant .card__image {
+  height: 175px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+.restaurant .card__description {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.restaurant .card__title {
+  font-weight: 700;
+  margin-bottom: 0.3125em;
+}
+.restaurant .card__location {
+  font-size: 0.875rem;
+  font-weight: 300;
+}
+
+.heart {
+  width: 25px;
+}
+.heart__fill {
+  fill: url(#gradient-fill);
+}
+.heart__mask {
+  fill: white;
+  transform: scale(2);
+  transform-origin: center;
+}
+.heart__stroke {
+  transition: opacity 1s;
+}
+.heart:hover .heart__mask {
+  animation: heart 1500ms both;
+}
+.heart:hover .heart__stroke {
+  opacity: 0;
 }
 
 /*# sourceMappingURL=main.css.map */

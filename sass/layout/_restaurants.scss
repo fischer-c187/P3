@@ -1,0 +1,17 @@
+.restaurant {
+    background-color: $grey-background; 
+    padding: em(50) 0;
+
+    .title {
+        margin-left: 5%;
+    }
+
+    &__grid-wrapper {
+        width: 90%;
+        margin: em(25) auto;
+        display: grid;
+        grid-template: 250px / repeat(auto-fit, minmax(300px, 1fr));
+        grid-auto-rows: 250px;
+        gap: 25px;
+    }
+}

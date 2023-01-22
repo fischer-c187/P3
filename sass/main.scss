@@ -5,12 +5,16 @@
 @import 'base/reset';
 @import 'base/fonts';
 @import 'base/typography';
+@import 'base/animations';
 
 @import 'layout/header';
 @import 'layout/functionning';
+@import 'layout/restaurants';
+@import 'layout/footer';
 
 
 @import 'components/buttons';
 @import 'components/logo';
 @import 'components/title';
-
+@import 'components/card';
+@import 'components/heart';
