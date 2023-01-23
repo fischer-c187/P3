@@ -3,11 +3,12 @@
     padding: em(50) 0;
 
     .title {
-        margin-left: 5%;
+        width: min(1400px, 90%);
+        margin: auto;
     }
 
     &__grid-wrapper {
-        width: 90%;
+        width: min(1400px, 90%);
         margin: em(25) auto;
         display: grid;
         grid-template: 250px / repeat(auto-fit, minmax(300px, 1fr));

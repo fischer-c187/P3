@@ -115,6 +115,31 @@ html {
     transform: translatey(-120%) rotate(360deg) scale(2);
   }
 }
+@keyframes scale {
+  0%, 100% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes hidden {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 .header {
   text-align: center;
 }
@@ -150,7 +175,7 @@ html {
 }
 
 .functionning {
-  width: 90%;
+  width: min(1400px, 90%);
   margin: auto;
   padding: 3.125em 0;
 }
@@ -203,10 +228,11 @@ html {
   padding: 3.125em 0;
 }
 .restaurant .title {
-  margin-left: 5%;
+  width: min(1400px, 90%);
+  margin: auto;
 }
 .restaurant__grid-wrapper {
-  width: 90%;
+  width: min(1400px, 90%);
   margin: 1.5625em auto;
   display: grid;
   grid-template: 250px/repeat(auto-fit, minmax(300px, 1fr));
@@ -233,6 +259,42 @@ html {
   width: 12px;
   font-size: 0.75rem;
   margin-right: 0.625em;
+}
+
+.loader {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: hidden 2s 3s both;
+  z-index: 1000;
+}
+.loader__circle {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  animation: rotation 1s linear infinite;
+}
+.loader__circle::after, .loader__circle::before {
+  content: "";
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  top: 0;
+  background-color: #9356dc;
+  border-radius: 50%;
+  animation: scale 1s infinite ease-in-out;
+}
+.loader__circle::before {
+  top: auto;
+  bottom: 0;
+  background-color: #ff79da;
+  animation-delay: 0.5s;
 }
 
 .btn {
@@ -263,6 +325,7 @@ html {
   background-color: #fff;
   border-radius: 15px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  position: relative;
 }
 .restaurant .card a {
   height: 100%;
@@ -292,6 +355,18 @@ html {
 .restaurant .card__location {
   font-size: 0.875rem;
   font-weight: 300;
+}
+.restaurant .card--new::after {
+  content: "Nouveau";
+  background-color: #99E2D0;
+  color: #217460;
+  font-size: 0.875rem;
+  font-weight: 700;
+  padding: 0.3125em 0.9375em;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  z-index: 10;
 }
 
 .heart {

@@ -4,6 +4,7 @@
         background-color: #fff;
         border-radius: 15px;
         box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+        position: relative;
 
         a {
             height: 100%;
@@ -31,6 +32,19 @@
         &__location {
             font-size: rem(14);
             font-weight: 300;
+        }
+
+        &--new::after {
+            content: 'Nouveau';
+            background-color: $new-color;
+            color: darken($color: $new-color, $amount: 45%);
+            font-size: rem(14);
+            font-weight: 700;
+            padding: em(5) em(15);
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            z-index: 10;
         }
 
     }

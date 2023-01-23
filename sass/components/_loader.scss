@@ -1,0 +1,39 @@
+
+.loader {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: hidden 2s 3s both;
+    z-index: 1000;
+
+    &__circle {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        animation: rotation 1s linear infinite;
+
+        &::after, &::before {
+            content: '';
+            position: absolute;
+            width: 48px;
+            height: 48px;
+            top: 0;
+            background-color: $primary-color;
+            border-radius: 50%;
+            animation: scale 1s infinite ease-in-out;
+        }
+
+        &::before {
+            top: auto;
+            bottom: 0;
+            background-color: $secondary-color;
+            animation-delay: 0.5s;
+        }
+    }
+  }
