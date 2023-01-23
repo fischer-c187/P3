@@ -1,4 +1,21 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 798px) {
+  .page-wrapper {
+    max-width: 1400px;
+    margin: auto;
+  }
+}
+
+main {
+  flex: 1;
+}
+
 /***
     The new CSS reset - version 1.8.2 (last updated 23.12.2022)
     GitHub page: https://github.com/elad2412/the-new-css-reset
@@ -7,7 +24,6 @@
     Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
     - The "symbol *" part is to solve Firefox SVG sprite bug
  */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
 *:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
   all: unset;
   display: revert;
@@ -155,17 +171,32 @@ html {
 .header__location i {
   margin-right: 1.25em;
 }
+@media (min-width: 798px) {
+  .header__top {
+    padding: 0 0.9375em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header__logo {
+    box-shadow: none;
+  }
+  .header__location {
+    background-color: white;
+  }
+}
 
 .hero {
   padding: 3.125em 0;
   background-color: rgba(0, 0, 0, 0.05);
 }
 .hero__title {
-  width: 75%;
+  width: max(375px, 75%);
   margin: auto;
 }
 .hero__description {
-  width: 90%;
+  width: max(375px, 90%);
   margin: auto;
   opacity: 0.75;
   font-size: 1.125rem;
@@ -182,9 +213,13 @@ html {
 .functionning__grid-wrapper {
   display: grid;
   margin-top: 1.5625em;
-  grid-template: 75px/repeat(auto-fit, minmax(300px, 1fr));
-  grid-auto-rows: 75px;
+  grid-template: repeat(3, 75px)/minmax(300px, 1fr);
   gap: 25px;
+}
+@media (min-width: 798px) {
+  .functionning__grid-wrapper {
+    grid-template: 75px/repeat(3, minmax(200px, 1fr));
+  }
 }
 .functionning__card {
   position: relative;
@@ -239,6 +274,17 @@ html {
   grid-auto-rows: 250px;
   gap: 25px;
 }
+@media (min-width: 798px) {
+  .restaurant__grid-wrapper {
+    grid-template: 250px/repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+@media (min-width: 798px) {
+  .restaurant {
+    margin-bottom: 3.125em;
+    border-radius: 15px;
+  }
+}
 
 .footer {
   padding: 1.5625em;
@@ -271,7 +317,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: hidden 2s 3s both;
+  animation: hidden 2s 30ms both;
   z-index: 1000;
 }
 .loader__circle {

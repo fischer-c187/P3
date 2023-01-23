@@ -1,0 +1,13 @@
+.page-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    @include desktop {
+        max-width: 1400px;
+        margin: auto;
+    }
+}
+
+main {
+    flex: 1;
+}

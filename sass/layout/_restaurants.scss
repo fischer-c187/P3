@@ -14,5 +14,14 @@
         grid-template: 250px / repeat(auto-fit, minmax(300px, 1fr));
         grid-auto-rows: 250px;
         gap: 25px;
+
+        @include desktop {
+            grid-template: 250px / repeat(auto-fit, minmax(250px, 1fr));
+        }
+    }
+
+    @include desktop {
+        margin-bottom: em(50);
+        border-radius: 15px;
     }
 }

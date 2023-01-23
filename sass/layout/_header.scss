@@ -16,6 +16,21 @@
             margin-right: em(20);
         }
     }
+
+    @include desktop {
+        &__top {
+            padding: 0 em(15);
+            @include flexbox(row, space-between, center);
+        }
+
+        &__logo {
+            box-shadow: none;
+        }
+
+        &__location {
+            background-color: white;
+        }
+    }
 }
 
 .hero {
@@ -23,12 +38,12 @@
     background-color: $grey-background;
 
     &__title {
-        width: 75%;
+        width: max(375px, 75%);
         margin: auto;
     }
 
     &__description {
-        width: 90%;
+        width: max(375px, 90%);
         margin: auto;
         opacity: 0.75;
         font-size: rem(18);
@@ -36,4 +51,5 @@
         margin-top: em(15);
         margin-bottom: em(30);
     }
+
 }

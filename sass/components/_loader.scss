@@ -9,7 +9,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: hidden 2s 3s both;
+    animation: hidden 2s 30ms both;
     z-index: 1000;
 
     &__circle {
