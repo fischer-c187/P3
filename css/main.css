@@ -150,6 +150,16 @@ html {
     visibility: hidden;
   }
 }
+@keyframes appear {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .header {
   width: max(375px, 100%);
   text-align: center;
@@ -322,6 +332,7 @@ html {
   margin-top: -2.5em;
   border-radius: 25px 25px 0 0;
   min-width: 375px;
+  height: 100%;
 }
 .presentation__top {
   width: max(350px, 90%);
@@ -353,6 +364,8 @@ html {
 @media (min-width: 798px) {
   .menu {
     justify-content: space-around;
+    align-items: flex-start;
+    min-height: 400px;
   }
 }
 .menu__dishes {
@@ -380,7 +393,7 @@ html {
   display: grid;
   grid-template: 70px/1fr;
   grid-auto-rows: 70px;
-  gap: 10px;
+  gap: 20px;
 }
 
 .footer {
@@ -523,6 +536,7 @@ html {
   display: flex;
   border-radius: 15px;
   overflow: hidden;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
 }
 .menu .card__info {
   width: 100%;
@@ -581,6 +595,18 @@ html {
 }
 .menu .card:hover .card__icon {
   transform: rotate(360deg);
+}
+.menu .card:nth-child(1) {
+  animation: 1s ease-out 200ms backwards appear;
+}
+.menu .card:nth-child(2) {
+  animation: 1s ease-out 400ms backwards appear;
+}
+.menu .card:nth-child(3) {
+  animation: 1s ease-out 600ms backwards appear;
+}
+.menu .card:nth-child(4) {
+  animation: 1s ease-out 800ms backwards appear;
 }
 
 .heart {

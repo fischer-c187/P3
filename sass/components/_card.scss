@@ -55,9 +55,9 @@
     .card {
         background-color: white;
         display: flex;
-        // position: relative;
         border-radius: 15px;
         overflow: hidden;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.05);
 
         &__info {
             width: 100%;
@@ -127,5 +127,7 @@
         &:hover .card__icon {
             transform: rotate(360deg);
         }
+
+        @include appear(200ms, 4);
     }
 }

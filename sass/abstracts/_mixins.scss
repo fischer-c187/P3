@@ -12,7 +12,13 @@
     align-items: center;
 }
 
-
+@mixin appear($delay: 200ms, $nbr_class: 4) {
+    @for $i from 1 through $nbr_class {
+        &:nth-child(#{$i}) {
+            animation: 1s ease-out $i*$delay backwards appear;
+        }
+    }
+}
 // media queries
 @mixin desktop {
     @media (min-width: map-get($breakpoint, desktop)) { @content }
