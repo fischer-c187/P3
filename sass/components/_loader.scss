@@ -6,10 +6,9 @@
     top: 0;
     bottom: 0;
     background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: hidden 2s 30ms both;
+    @include flexbox-center;
+    // animation qui permet de faire disparaitre le loader
+    animation: hidden 2s 2000ms both ease-in;
     z-index: 1000;
 
     &__circle {
@@ -18,6 +17,7 @@
         position: relative;
         animation: rotation 1s linear infinite;
 
+        // creation des cercles
         &::after, &::before {
             content: '';
             position: absolute;

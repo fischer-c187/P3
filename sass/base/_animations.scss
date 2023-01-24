@@ -1,3 +1,4 @@
+// animation de remplissage du coeur
 @keyframes heart {
     0% {
       transform: translatey(0) rotate(0deg) scale(2); 
@@ -7,6 +8,8 @@
     }
   }
 
+
+// animation pour le loader
 @keyframes scale {
   0%, 100% {
     transform: scale(0);
@@ -30,6 +33,7 @@
   }
   100% { 
     opacity: 0;
+    // permet de desactiver le loader, sinon on se retrouve dans l'incapacite de naviguer sur le site
     visibility: hidden;
   }
 }

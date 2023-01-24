@@ -85,8 +85,8 @@ pre {
     -moz-user-modify: read-write;
     -webkit-user-modify: read-write;
     overflow-wrap: break-word;
-    -webkit-line-break: after-white-space;
-    line-break: after-white-space;
+    // -webkit-line-break: after-white-space;
+    // line-break: after-white-space;
     -webkit-user-select: auto;
     user-select: auto;
 }
@@ -97,6 +97,6 @@ pre {
 }
 
 /* Revert Modal native behavior */
-:where(dialog:modal) {
-    all: revert;
-}
+// :where(dialog:modal) {
+//     all: revert;
+// }

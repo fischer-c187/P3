@@ -13,7 +13,7 @@
 }
 
 
-//media queries
+// media queries
 @mixin desktop {
     @media (min-width: map-get($breakpoint, desktop)) { @content }
 }
