@@ -366,6 +366,7 @@ html {
     justify-content: space-around;
     align-items: flex-start;
     min-height: 400px;
+    margin: 3.125em auto;
   }
 }
 .menu__dishes {
@@ -481,6 +482,11 @@ html {
 .presentation__title {
   font-family: shrikhand, sans-serif;
   font-size: 1.75rem;
+}
+@media (min-width: 798px) {
+  .presentation__title {
+    font-size: 2rem;
+  }
 }
 
 .restaurant .card {

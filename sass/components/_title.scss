@@ -6,4 +6,8 @@
 .presentation__title {
     font-family: shrikhand, sans-serif;
     font-size: rem(28);
+
+    @include desktop {
+        font-size: rem(32);
+    }
 }
