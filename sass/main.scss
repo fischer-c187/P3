@@ -10,9 +10,11 @@
 
 @import 'layout/header';
 @import 'layout/functionning';
+@import 'layout/grid';
+@import 'layout/hero';
 @import 'layout/restaurants';
-@import 'layout/presentation';
 @import 'layout/footer';
+@import 'layout/menu';
 
 @import 'components/loader';
 @import 'components/buttons';
@@ -20,3 +22,5 @@
 @import 'components/title';
 @import 'components/card';
 @import 'components/heart';
+
+@import 'pages/presentation';

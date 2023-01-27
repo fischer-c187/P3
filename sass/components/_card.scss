@@ -1,133 +1,167 @@
-.restaurant {
-    
-    .card {
-        background-color: #fff;
-        border-radius: 15px;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.15);
-        position: relative;
+.functionningCard {
+  position: relative;
+  background-color: $grey-background;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  @include flexbox($align: center);
+  column-gap: 20px;
+  border-radius: 20px;
+  font-weight: 500;
+  //on decale notre card d'un demi-cercle
+  margin-left: calc($size-icon-number / 2);
+  // pour appliquer notre marge à partir du bord du cercle, on ajoute la moitier de celui-ci
+  padding-left: calc(20px + $size-icon-number / 2);
 
-        a {
-            height: 100%;
-            @include flexbox(column, center);
-        }
+  i {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: em(20);
+  }
 
-        &__image {
-            height: 175px;
-            width: 100%;
-            object-fit: cover;
-            border-radius: 15px 15px 0 0;
-        }
+  &--number {
+    position: absolute;
+    left: -12px;
+    height: $size-icon-number;
+    width: $size-icon-number;
+    padding-top: em(3);
+    background-color: $primary-color;
+    color: white;
+    text-align: center;
+    border-radius: 50%;
+    font-weight: 500;
+  }
 
-        &__description {
-            width: 90%;
-            margin: auto;
-            @include flexbox(row, space-between, center);
-        }
+  &--pink {
+    background-color: rgba($primary-color, 0.1);
 
-        &__title {
-            font-weight: 700;
-            margin-bottom: em(5);
-        }
-
-        &__location {
-            font-size: rem(14);
-            font-weight: 300;
-        }
-
-        // permet d'ajouter l'encart 'nouveau' sur les cards
-        &--new::after {
-            content: 'Nouveau';
-            background-color: $new-color;
-            color: darken($color: $new-color, $amount: 45%);
-            font-size: rem(14);
-            font-weight: 700;
-            padding: em(5) em(15);
-            position: absolute;
-            right: 15px;
-            top: 15px;
-            z-index: 10;
-        }
-
+    i {
+      color: $primary-color;
     }
+  }
 }
 
-.menu {
-    .card {
-        background-color: white;
-        display: flex;
-        border-radius: 15px;
-        overflow: hidden;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+.restaurantCard {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  position: relative;
 
-        &__info {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            padding: 15px;
-            overflow: hidden;
-            gap: 10px;
-        }
+  a {
+    height: 100%;
+    @include flexbox(column, center);
+  }
 
-        &__price {
-            display: flex;
-            align-items: end;
-            font-weight: 500;
-        }
-        
-        &__text {
-            white-space: nowrap;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        
-        }
+  &__image {
+    height: 175px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+  }
 
-        &__title {
-            font-size: rem(18);
-            font-weight: 500;
-        }
+  &__description {
+    width: 90%;
+    margin: auto;
+    @include flexbox(row, space-between, center);
+  }
 
-        &__description {
-            font-size: rem(15);
-            font-weight: 300;
-        }
-        
-        &__title, &__description {
-            max-width: 100%;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-          
-        &__check {
-            width: 0;
-            overflow: hidden;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 1.5rem;
-            background-color: #99E2D0;
-            opacity: 0;
-            transition: all 800ms ease-in;
-        }
-        
-        &__icon {
-            color: white;
-            transform: rotate(0);
-            transition: transform 800ms ease-out;
-        }
-        
-        &:hover .card__check {
-            width: 30%;
-            opacity: 1;
-        }
-        
-        &:hover .card__icon {
-            transform: rotate(360deg);
-        }
+  &__title {
+    font-weight: 700;
+    margin-bottom: em(5);
+  }
 
-        @include appear(200ms, 4);
-    }
+  &__location {
+    font-size: rem(14);
+    font-weight: 300;
+  }
+
+  // permet d'ajouter l'encart 'nouveau' sur les cards
+  &--new::after {
+    content: "Nouveau";
+    background-color: $new-color;
+    color: darken($color: $new-color, $amount: 45%);
+    font-size: rem(14);
+    font-weight: 700;
+    padding: em(5) em(15);
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    z-index: 10;
+  }
+}
+
+.menuCard {
+  background-color: white;
+  display: flex;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+
+  &__info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    overflow: hidden;
+    gap: 10px;
+  }
+
+  &__price {
+    display: flex;
+    align-items: end;
+    font-weight: 500;
+  }
+
+  &__text {
+    white-space: nowrap;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-size: rem(18);
+    font-weight: 500;
+  }
+
+  &__description {
+    font-size: rem(15);
+    font-weight: 300;
+  }
+
+  &__title,
+  &__description {
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__check {
+    width: 0;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    background-color: #99e2d0;
+    opacity: 0;
+    transition: all 800ms ease-in;
+  }
+
+  &__icon {
+    color: white;
+    transform: rotate(0);
+    transition: transform 800ms ease-out;
+  }
+
+  &:hover &__check {
+    width: 30%;
+    opacity: 1;
+  }
+
+  &:hover &__icon {
+    transform: rotate(360deg);
+  }
+
+  @include appear(200ms, 4);
 }

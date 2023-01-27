@@ -1,39 +1,40 @@
-
 .loader {
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    background-color: white;
-    @include flexbox(row, center, center);
-    // animation qui permet de faire disparaitre le loader
-    animation: hidden 2s 2000ms both ease-in;
-    z-index: 1000;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  background-color: white;
+  @include flexbox(row, center, center);
+  // animation qui permet de faire disparaitre le loader
+  animation: hidden 2s 2000ms both ease-in;
+  z-index: 1000;
 
-    &__circle {
-        width: 100px;
-        height: 100px;
-        position: relative;
-        animation: rotation 1s linear infinite;
+  &__circle {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    animation: rotation 1s linear infinite;
 
-        // creation des cercles
-        &::after, &::before {
-            content: '';
-            position: absolute;
-            width: 48px;
-            height: 48px;
-            top: 0;
-            background-color: $primary-color;
-            border-radius: 50%;
-            animation: scale 1s infinite ease-in-out;
-        }
+    // creation des cercles
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      width: 48px;
+      height: 48px;
+      top: 0;
+      background-color: $primary-color;
+      border-radius: 50%;
+      animation: scale 1s infinite ease-in-out;
+    }
 
-        &::before {
-            top: auto;
-            bottom: 0;
-            background-color: $secondary-color;
-            animation-delay: 0.5s;
-        }
+    // changement de couleur et positionnement du second cercle
+    &::before {
+      top: auto;
+      bottom: 0;
+      background-color: $secondary-color;
+      animation-delay: 0.5s;
     }
   }
+}

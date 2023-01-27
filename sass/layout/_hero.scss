@@ -1,0 +1,38 @@
+.hero {
+  padding: em(50) 0;
+  background-color: $grey-background;
+
+  &__title {
+      width: max(375px, 75%);
+      margin: auto;
+  }
+
+  &__description {
+      width: max(375px, 90%);
+      margin: auto;
+      opacity: 0.75;
+      font-size: rem(18);
+      font-weight: 300;
+      margin-top: em(15);
+      margin-bottom: em(30);
+  }
+
+  &__image {
+      object-fit: cover;
+      width: 100%;
+      max-height: em(400);
+  }
+
+  &--no-bg {
+      background-color: transparent;
+  }
+
+  &--no-padding {
+      padding: 0;
+  }
+
+  @include desktop {
+      border-radius: 15px;
+  }
+
+}

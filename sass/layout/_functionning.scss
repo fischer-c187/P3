@@ -1,56 +1,5 @@
 .functionning {
-    width: min(1400px, 90%);
-    margin: auto;
-    padding: em(50) 0;
-
-    &__grid-wrapper {
-        display: grid;
-        margin-top: em(25);
-        grid-template: repeat(3, 75px) / minmax(300px, 1fr);
-        gap: 25px;
-
-        @include desktop {
-            grid-template: 75px / repeat(3, minmax(200px, 1fr));
-        }
-    }
-
-    &__card {
-        position: relative;
-        background-color: $grey-background;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.15);
-        @include flexbox($align: center);
-        column-gap: 20px;
-        border-radius: 20px;
-        font-weight: 500;
-        //on decale notre card d'un demi-cercle
-        margin-left: calc($size-icon-number / 2);
-        // pour appliquer notre marge à partir du bord du cercle, on ajoute la moitier de celui-ci
-        padding-left: calc(20px + $size-icon-number / 2);
-
-        i {
-            color: rgba(0, 0, 0, 0.50);
-            font-size: em(20);
-        }
-
-        &--number {
-            position: absolute;
-            left: -12px;
-            height: $size-icon-number;
-            width: $size-icon-number;
-            padding-top: em(3);
-            background-color: $primary-color;
-            color: white;
-            text-align: center;
-            border-radius: 50%;
-            font-weight: 500;
-        }
-        
-        &--pink {
-            background-color: rgba($primary-color, 0.1);
-
-            i {
-                color: $primary-color;
-            }
-        }
-    }
+  width: min(1400px, 90%);
+  margin: auto;
+  padding: em(50) 0;
 }

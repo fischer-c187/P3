@@ -1,25 +1,25 @@
 .heart {
-    width: 25px;
+  width: 25px;
 
-    &__fill {
-        fill: url(#gradient-fill);
-    }
+  &__fill {
+    fill: url(#gradient-fill);
+  }
 
-    &__mask {
-        fill: white;
-        transform: scale(2);
-        transform-origin: center;
-    }
+  &__mask {
+    fill: white;
+    transform: scale(2);
+    transform-origin: center;
+  }
 
-    &__stroke {
-        transition: opacity 1s;
-    }
+  &__stroke {
+    transition: opacity 1s;
+  }
 
-    &:hover &__mask {
-        animation: heart 1500ms both;
-    }
+  &:hover &__mask {
+    animation: heart 1500ms both;
+  }
 
-    &:hover &__stroke {
-        opacity: 0;
-    }
+  &:hover &__stroke {
+    opacity: 0;
+  }
 }

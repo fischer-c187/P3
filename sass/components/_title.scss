@@ -1,13 +1,13 @@
 .title {
-    font-size: rem(24);
-    font-weight: 700;
+  font-size: rem(24);
+  font-weight: 700;
 }
 
 .presentation__title {
-    font-family: shrikhand, sans-serif;
-    font-size: rem(28);
+  font-family: shrikhand, sans-serif;
+  font-size: rem(28);
 
-    @include desktop {
-        font-size: rem(32);
-    }
+  @include desktop {
+    font-size: rem(32);
+  }
 }

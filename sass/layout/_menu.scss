@@ -1,0 +1,37 @@
+.menu {
+  width: 90%;
+  margin: em(30) auto;
+  @include flexbox($justify: center, $align: center);
+  flex-wrap: wrap;
+  gap: em(30);
+
+  @include desktop {
+    justify-content: space-around;
+    align-items: flex-start;
+    min-height: 400px;
+    margin: em(50) auto;
+  }
+
+  &__dishes {
+    width: 100%;
+    // flex-wrap: 1;
+    @include desktop {
+      width: 350px;
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-weight: 300;
+
+    // création de la bar en dessous de entrées, plats, desserts
+    &::after {
+      content: "";
+      display: block;
+      width: 40px;
+      height: 3px;
+      background-color: $new-color;
+      margin-top: em(5);
+    }
+  }
+}
