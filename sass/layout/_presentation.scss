@@ -9,7 +9,7 @@
 
     &__top {
         width: max(350px, 90%);
-        @include flexbox-center;
+        @include flexbox(row, center, center);
         gap: em(40);
         margin: auto;
     }
